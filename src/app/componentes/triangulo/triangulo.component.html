@@ -1,0 +1,77 @@
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title>
+      Cálculo del perímetro de un triángulo
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <!-- Imagen del triángulo -->
+    <ion-img
+      src="assets/imagenes/triangulo.png"
+      alt="Figura geométrica de un triángulo">
+    </ion-img>
+
+    <!-- Instrucciones -->
+    <ion-text>
+      <p>
+        Ingresa las medidas de los tres lados del triángulo
+        para calcular su perímetro.
+      </p>
+    </ion-text>
+
+    <!-- Lado A -->
+    <ion-item>
+      <ion-input
+        label="Lado A (cm)"
+        labelPlacement="stacked"
+        type="number"
+        min="0"
+        [(ngModel)]="ladoA"
+        placeholder="Ejemplo: 10">
+      </ion-input>
+    </ion-item>
+
+    <!-- Lado B -->
+    <ion-item>
+      <ion-input
+        label="Lado B (cm)"
+        labelPlacement="stacked"
+        type="number"
+        min="0"
+        [(ngModel)]="ladoB"
+        placeholder="Ejemplo: 20">
+      </ion-input>
+    </ion-item>
+
+    <!-- Lado C -->
+    <ion-item>
+      <ion-input
+        label="Lado C (cm)"
+        labelPlacement="stacked"
+        type="number"
+        min="0"
+        [(ngModel)]="ladoC"
+        placeholder="Ejemplo: 15">
+      </ion-input>
+    </ion-item>
+
+    <!-- Botón para calcular -->
+    <ion-button
+      expand="block"
+      (click)="calcularPerimetro()">
+      Calcular perímetro
+    </ion-button>
+
+    <!-- Resultado -->
+    <ion-text *ngIf="perimetro !== null">
+      <h2>
+        Perímetro: {{ perimetro | number:'1.2-2' }} cm
+      </h2>
+    </ion-text>
+
+  </ion-card-content>
+
+</ion-card>

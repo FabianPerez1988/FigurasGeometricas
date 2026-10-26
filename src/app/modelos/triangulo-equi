@@ -1,0 +1,25 @@
+import { TrianguloEscaleno } from './triangulo-esc';
+
+/**
+ * Clase que representa un triángulo equilátero.
+ *
+ * Hereda de TrianguloEscaleno, que a su vez
+ * hereda de FiguraGeometrica.
+ *
+ * Un triángulo equilátero tiene sus tres lados iguales.
+ */
+export class TrianguloEquilatero extends TrianguloEscaleno {
+
+  /**
+   * Constructor de la clase TrianguloEquilatero.
+   *
+   * @param ladoA Medida de cada lado del triángulo.
+   */
+  constructor(ladoA: number) {
+
+    // Envía la misma medida para los tres lados.
+    super(ladoA, ladoA, ladoA);
+
+  }
+
+}
